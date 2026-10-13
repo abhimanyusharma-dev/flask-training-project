@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Library Management</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-icon">
+                🏠
+            </div>
+
+            <h1>Library Dashboard</h1>
+
+        </div>
+
+
+        <div class="dashboard-buttons">
+
+            <a href="{{ url_for('issue_book') }}" class="dashboard-btn issue-btn">
+    ➕ Submit (Issue Book)
+</a>
+
+<a href="{{ url_for('view_books') }}" class="dashboard-btn view-btn">
+    📚 View Book
+</a>
+
+        </div>
+
+<a href="{{ url_for('logout') }}" class="logout">
+    Logout
+</a>
+
+    </div>
+
+</body>
+
+</html>

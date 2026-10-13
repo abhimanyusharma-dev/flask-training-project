@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Issue Book</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Issue Book</h1>
+
+        <p class="subtitle">
+            Enter Book Details
+        </p>
+
+        <form method="POST">
+
+            <label>Book ID</label>
+
+            <input
+                type="text"
+                name="book_id"
+                placeholder="Enter book ID"
+                required
+            >
+
+
+            <label>Book Name</label>
+
+            <input
+                type="text"
+                name="book_name"
+                placeholder="Enter book name"
+                required
+            >
+
+
+            <label>Book Number</label>
+
+            <input
+                type="text"
+                name="book_number"
+                placeholder="Enter book number"
+                required
+            >
+
+
+            <label>Name of Student</label>
+
+            <input
+                type="text"
+                name="student_name"
+                placeholder="Enter student name"
+                required
+            >
+
+
+            <label>Issue Date</label>
+
+            <input
+                type="date"
+                name="issue_date"
+                required
+            >
+
+
+            <label>Due Date</label>
+
+            <input
+                type="date"
+                name="due_date"
+                required
+            >
+
+
+            <button type="submit" class="main-btn">
+                Submit
+            </button>
+
+        </form>
+
+
+        <p class="bottom-text">
+
+            <a href="{{ url_for('dashboard') }}">
+                Back to Dashboard
+            </a>
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>

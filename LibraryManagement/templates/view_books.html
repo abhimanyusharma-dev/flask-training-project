@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="books-container">
+
+        <h1>Book Details / List</h1>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Name</th>
+                        <th>Book Number</th>
+                        <th>Name of Student</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% if books %}
+
+                        {% for book in books %}
+
+                        <tr>
+                            <td>{{ book[1] }}</td>
+                            <td>{{ book[2] }}</td>
+                            <td>{{ book[3] }}</td>
+                            <td>{{ book[4] }}</td>
+                            <td>{{ book[5] }}</td>
+                            <td>{{ book[6] }}</td>
+                        </tr>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <tr>
+                            <td colspan="6">
+                                No books issued yet.
+                            </td>
+                        </tr>
+
+                    {% endif %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <a href="{{ url_for('dashboard') }}" class="back-btn">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</body>
+
+</html>

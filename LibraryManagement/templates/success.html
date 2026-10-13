@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Issued Successfully</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="success-container">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>Book Issued Successfully!</h1>
+
+        <div class="book-info">
+
+            <p>
+                <strong>Book Name:</strong>
+                {{ book_name }}
+            </p>
+
+            <p>
+                <strong>Student Name:</strong>
+                {{ student_name }}
+            </p>
+
+            <p>
+                <strong>Issue Date:</strong>
+                {{ issue_date }}
+            </p>
+
+        </div>
+
+
+        <div class="success-buttons">
+
+            <a href="{{ url_for('dashboard') }}"
+               class="dashboard-btn issue-btn">
+                Back to Dashboard
+            </a>
+
+            <a href="{{ url_for('view_books') }}"
+               class="dashboard-btn view-btn">
+                View Book
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Library Management</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <div class="book-icon">📚</div>
+
+        <h1>Login</h1>
+
+        <p class="subtitle">
+            Library Management System
+        </p>
+
+        <form method="POST">
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit" class="main-btn">
+                Login
+            </button>
+
+        </form>
+
+        <p class="bottom-text">
+            Don't have an account?
+            <a href="{{ url_for('signup') }}">Create New Account</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

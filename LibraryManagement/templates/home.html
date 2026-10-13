@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home-container">
+
+        <div class="book-icon">📚</div>
+
+        <h1>Library Management</h1>
+        <h2>System</h2>
+
+        <div class="button-container">
+            <a href="{{ url_for('signup') }}" class="btn signup-btn">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="btn login-btn">Login</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
